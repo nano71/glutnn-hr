@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" serverName="ftp://nano71.com/glutnn/hr/" remoteFilesAllowedToDisappearOnAutoupload="false">
+    <serverData>
+      <paths name="ftp://nano71.com/glutnn/hr/">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/glutnn/hr" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>
