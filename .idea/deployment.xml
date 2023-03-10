@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" serverName="ftp://nano71.com/glutnn/hr/" remoteFilesAllowedToDisappearOnAutoupload="false">
+  <component name="PublishConfigData" serverName="ftp://nano71.com/glutnn/hr/" uploadOnCheckin="d32c5870-cbb0-4a3d-9e3e-96162f7fbcad" remoteFilesAllowedToDisappearOnAutoupload="false">
     <serverData>
       <paths name="ftp://nano71.com/glutnn/hr/">
         <serverdata>
@@ -10,5 +10,6 @@
         </serverdata>
       </paths>
     </serverData>
+    <option name="myUploadOnCheckinName" value="ftp://nano71.com/glutnn/hr/" />
   </component>
 </project>
