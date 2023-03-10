@@ -7,7 +7,42 @@ for (let i = 0; i < selects.length; i++) {
         document.querySelectorAll("#content > .box.left .content")[i].classList.add("show")
     }
 }
-
+let search = document.querySelector("#top .top .search")
+search.onclick = function () {
+    let value = document.querySelector("#top #search").value;
+    value && window.open(this.getAttribute("target") + value)
+    value || alert("不为空")
+}
+let canScroll = false
+let goTop = document.querySelector("#goTop")
+const callback = function () {
+    const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+    if (scrollTop > 0 && canScroll) {
+        window.scrollTo(0, Math.floor(scrollTop - scrollTop / 8));
+        window.requestAnimationFrame(callback);
+    } else {
+        window.cancelAnimationFrame(callback)
+    }
+}
+goTop.onclick = function () {
+    window.requestAnimationFrame(callback);
+}
+let currentScroll = {
+    x: 0, y: 0
+}
+window.onscroll = function (e) {
+    // console.log(window.scrollY < currentScroll.y);
+    if (window.scrollY > currentScroll.y) {
+        canScroll = false
+    }
+    currentScroll.y = window.scrollY
+    if (window.scrollY > window.screen.height * 0.5) {
+        goTop.classList.remove("hide")
+        canScroll = true
+    } else {
+        goTop.classList.add("hide")
+    }
+}
 let masks = document.querySelectorAll("#plate .mask")
 let maskColors = [
     "#2962FF",

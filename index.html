@@ -1,16 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
     <meta charset="UTF-8">
     <title>人力资源部 - 桂林理工大学南宁分校</title>
     <link href="./favicon.ico" rel="shortcut icon" type="image/x-icon">
-    <link rel="stylesheet" href="./css/public.css">
-    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet/less" type="text/css" href="./css/public.less">
+    <link rel="stylesheet/less" type="text/css" href="./css/index/index.less">
     <link rel="stylesheet/less" type="text/css" href="./css/index/plate.less">
     <link rel="stylesheet/less" type="text/css" href="./css/index/contact.less">
     <link rel="stylesheet/less" type="text/css" href="./css/index/top.less">
     <script src="./js/less.js"></script>
-    <!--    <script src="https://cdn.jsdelivr.net/npm/less" ></script>-->
 </head>
 <body>
 <div id="top">
@@ -26,14 +25,6 @@
             <div class="down">
                 <input type="text" id="search" placeholder="键入内容">
                 <div class="search" target="http://nano71.com?search=">搜索</div>
-                <script>
-                    let search = document.querySelector("#top .top .search")
-                    search.onclick = function () {
-                        let value = document.querySelector("#top #search").value
-                        value && window.open(this.getAttribute("target") + value)
-                        value || alert("不为空")
-                    }
-                </script>
             </div>
         </div>
     </div>
@@ -51,7 +42,9 @@
 </div>
 <div id="banner">
     <div class="imageBox">
-        <img src="https://www.glut.edu.cn/images/qinglianguigong.jpg" alt="">
+        <a href="1"><img src="https://www.glut.edu.cn/images/qinglianguigong.jpg" alt=""/></a>
+        <a href="2"><img src="./static/2015060515183976.png" alt=""/></a>
+        <a href="3"><img src="./static/2015060515233660.png" alt=""/></a>
     </div>
     <div class="controlArea">
         <div class="leftArrow arrow">
@@ -62,8 +55,6 @@
         </div>
         <div class="dollBox">
             <div class="bar active"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
         </div>
     </div>
 </div>
@@ -318,14 +309,16 @@
     </div>
 
 </div>
-
-
 <div id="footer">
     <div class="box">
         <div class="copyright">Copyright © 2023 桂林理工大学南宁分校. All Rights Reserved.</div>
         <div class="icp">桂ICP备16010497号 / 桂ICP备16010497号-1</div>
     </div>
 </div>
+<div id="goTop" class="hide">
+    <img src="./static/arrow-up-s-line.png" alt="">
+</div>
 </body>
 <script src="./js/index/mask.js"></script>
+<script src="./js/index/banner.js"></script>
 </html>
