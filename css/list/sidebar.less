@@ -1,0 +1,62 @@
+#sidebar {
+    display: flex;
+    width: 280px;
+    flex-direction: column;
+    //background-color: #fff;
+    a.item {
+        background-color: #2962ff;
+        padding: 40px 100px;
+        //color: #ffffff;
+        font-size: 20px;
+        font-weight: 600;
+
+        &:hover {
+            color: #ffffff !important;
+
+            background-color: #4484ff;
+
+        }
+
+        &.active {
+            background-color: #fff;
+            color: #2962ff;
+
+            &:hover {
+                color: #2962ff !important;
+            }
+        }
+    }
+
+    .mask {
+        overflow: hidden;
+        position: relative;
+        height: 200px;
+        background-color: #2962ff;
+
+        img {
+
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+            opacity: .1;
+        }
+    }
+
+    .moreArea {
+        margin-top: 20px;
+        margin-left: 20px;
+
+        .links {
+            margin-top: 20px;
+            gap: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            font-size: 15px;
+
+            a.link {
+                color: #999999;
+            }
+        }
+    }
+
+}

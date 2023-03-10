@@ -1,0 +1,125 @@
+#content {
+    width: 1200px;
+    margin: 40px auto;
+    display: flex;
+    position: relative;
+
+
+    #list {
+        padding: 0 40px 40px;
+        flex: 1;
+        background-color: #fff;
+
+        .titleBar {
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+
+            .title {
+                display: inline-block;
+                padding: 40px 0;
+                font-size: 24px;
+                color: #2962FF;
+                border-bottom: 1px solid #2962FF;
+            }
+
+            .path {
+                //font-size: 14px;
+
+                .item {
+                    color: #999999;
+                }
+
+                .space {
+                    margin: 0 10px;
+                }
+
+                display: flex;
+                align-items: center;
+            }
+        }
+
+        > a.item {
+            font-size: 18px;
+            margin-top: 40px;
+            color: #333333 !important;
+            display: flex;
+            justify-content: space-between;
+            transition: 1s;
+
+            &:hover {
+                color: #2979FF !important;
+            }
+
+            .date {
+            }
+
+            .title:hover {
+                text-decoration: underline;
+            }
+        }
+
+        .tabControl {
+            gap: 20px;
+            align-items: center;
+            margin-top: 80px;
+            display: flex;
+            justify-content: center;
+
+            .count {
+                color: #333333;
+            }
+
+            a {
+                font-size: 14px;
+                padding: 0 10px;
+                height: 34px;
+                white-space: nowrap;
+                border: 1px solid #999999;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #333333;
+
+                &.disable {
+                    &:hover {
+                        color: #ccc !important;
+                        border-color: #cccccc;
+                    }
+
+                    color: #ccc;
+                    border-color: #cccccc;
+                }
+
+                &:hover {
+                    border-color: #2979FF;
+                    color: #2979FF !important;
+                }
+            }
+
+            .numberArea {
+                gap: 2px;
+                //margin: 0 40px;
+                display: flex;
+                font-family: "Microsoft YaHei UI Light", sans-serif;
+
+
+                a.item {
+                    width: 34px;
+                    padding: unset;
+
+                    &.active {
+                        border-color: #2979FF;
+                        background-color: #2979FF;
+                        color: #fff;
+
+                        &:hover {
+                            color: #ffffff !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

@@ -7,12 +7,7 @@ for (let i = 0; i < selects.length; i++) {
         document.querySelectorAll("#content > .box.left .content")[i].classList.add("show")
     }
 }
-let search = document.querySelector("#top .top .search")
-search.onclick = function () {
-    let value = document.querySelector("#top #search").value;
-    value && window.open(this.getAttribute("target") + value)
-    value || alert("不为空")
-}
+
 let canScroll = false
 let goTop = document.querySelector("#goTop")
 const callback = function () {
