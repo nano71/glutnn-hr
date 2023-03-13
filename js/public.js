@@ -4,3 +4,7 @@ search.onclick = function () {
     value && window.open(this.getAttribute("target") + value)
     value || alert("不为空")
 }
+let as = document.querySelectorAll("a")
+for (let i = 0; i < as.length; i++) {
+    as[i].target = "_blank"
+}
