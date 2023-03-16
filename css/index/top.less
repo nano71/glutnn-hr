@@ -37,8 +37,13 @@
 
             .top {
                 display: flex;
-                justify-content: center;
+                justify-content: space-between;
                 width: 100%;
+                align-items: center;
+
+                span {
+                    color: #ffffff;
+                }
 
                 a.item {
                     display: flex;
@@ -46,12 +51,13 @@
                     justify-content: space-between;
 
                     img {
-                        margin-right: 10px;
-                        width: 22px;
+                        margin-right: 4px;
+                        width: 18px;
                     }
 
                     &:hover {
                         color: white !important;
+                        text-decoration: underline
                     }
 
                     color: white;
