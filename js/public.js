@@ -6,5 +6,6 @@ search.onclick = function () {
 }
 let as = document.querySelectorAll("a")
 for (let i = 0; i < as.length; i++) {
-    as[i].target = "_blank"
+    if (!as[i].className.includes("this"))
+        as[i].target = "_blank"
 }
