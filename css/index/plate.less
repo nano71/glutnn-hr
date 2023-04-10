@@ -103,18 +103,23 @@
             .right {
                 display: flex;
                 flex: 1;
-                flex-direction: column;
+                //flex-direction: column;
                 overflow: hidden;
                 justify-content: space-between;
                 padding-left: 80px;
+                flex-wrap: wrap;
+                row-gap: 20px;
+                padding-top: 30px;
+                padding-bottom: 30px;
+                column-gap: 10px;
                 //height: 356px;
                 //gap: 20px;
 
                 a.item {
-                    flex: 1;
+
                     //height: 100px;
                     position: relative;
-                    width: 100%;
+                    width: calc(50% - 10px);
                     overflow: hidden;
                     display: flex;
                     justify-content: center;
