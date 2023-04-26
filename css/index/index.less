@@ -103,6 +103,7 @@
             &:hover {
                 opacity: 1;
             }
+
             height: 100%;
             position: absolute;
             display: flex;
@@ -246,13 +247,23 @@
 }
 
 
-
-
-
 #maskLogo {
     position: absolute;
     top: 100%;
     width: 300px;
     left: 55%;
     opacity: .05;
+}
+
+#float {
+    position: fixed;
+    right: 10px;
+    width: 200px;
+    /* height: 50px; */
+    top: 25vh;
+    z-index: 17;
+
+    img {
+        width: 100%;
+    }
 }
