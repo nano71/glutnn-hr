@@ -1,7 +1,7 @@
 a {
     text-decoration: unset;
     color: #fff;
-
+    
     &:hover {
         color: #2962FF !important;
     }
@@ -15,6 +15,7 @@ body {
     background-color: #f8f8f8;
     font-family: 幼圆, serif;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 #goTop {
@@ -26,11 +27,11 @@ body {
     opacity: .5;
     transition: .2s;
     cursor: pointer;
-
+    
     &.hide {
         display: none;
     }
-
+    
     &:hover {
         opacity: 1;
     }
@@ -43,44 +44,78 @@ body {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-
+    
     > #menu {
         background-color: #4484FF;
         width: 100%;
         display: flex;
         justify-content: center;
-
-        .box {
+        
+        > .box {
             width: 100%;
             max-width: 1200px;
             justify-content: space-between;
             height: 44px;
             display: flex;
-        }
-
-        .item {
-            height: 100%;
-            font-size: 18px;
-            display: flex;
-            align-items: center;
-            flex: 1;
-            justify-content: center;
-            white-space: nowrap;
-
-            &:hover {
-                background-color: #2979FF;
-                color: #ffffff !important;
+            
+            
+            > .item {
+                height: 100%;
+                font-size: 18px;
+                flex: 1;
+                position: relative;
+                
+                a {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    white-space: nowrap;
+                }
+                
+                a:hover {
+                    color: #ffffff !important;
+                }
+                
+                &:hover {
+                    background-color: #2979FF;
+                    color: #ffffff !important;
+                    position: relative;
+                    
+                    .childMenu {
+                        display: flex !important;
+                    }
+                }
+                
+                .childMenu {
+                    background-color: #4484FF;
+                    display: none;
+                    flex-direction: column;
+                    position: relative;
+                    z-index: 2;
+                    
+                    > .item {
+                        height: 44px;
+                        text-align: center;
+                        
+                        &:hover {
+                            background-color: #2979FF;
+                        }
+                    }
+                }
+                
             }
-
         }
-
+        
+        
     }
 }
 
 #footer {
     /*height: 200px;*/
     background-color: #29293f;
-
+    
     .box {
         width: 1200px;
         margin: auto;
@@ -91,20 +126,20 @@ body {
         justify-content: space-between;
         flex-wrap: wrap;
         align-items: flex-end;
-
+        
         .info {
             //width: 100%;
             display: flex;
             gap: 20px;
         }
-
+        
         .right {
             display: flex;
             flex-direction: column;
             align-items: flex-end;
         }
     }
-
+    
 }
 
 ::-webkit-scrollbar {
